@@ -1,0 +1,177 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="foto-perfil">
+			<img src="/imagenes/profilePhoto.png" alt="" />
+		</div>
+		<div class="nombre-ubicacion">
+			<h1>Rodney Cotton</h1>
+			<p>Helsinki, Finland</p>
+		</div>
+		<div class="skills">
+			<div class="tres-lineas">
+				<h3>100</h3>
+				<p>Points</p>
+			</div>
+			<div class="tres-lineas">
+				<h3>2,242</h3>
+				<p>followers</p>
+			</div>
+			<div class="tres-lineas">
+				<h3>1.432</h3>
+				<p>following</p>
+			</div>
+		</div>
+		<figure class="imagenes">
+			<div class="lista-uno">
+				<div class="foto-uno">
+					<img src="/imagenes/photo1.png" alt="" />
+				</div>
+				<div class="foto-dos">
+					<img src="/imagenes/photo2.png" alt="" />
+				</div>
+			</div>
+
+				<div class="lista-dos">
+					<div class="foto-tres">
+					<img src="/imagenes/photo3.png" alt="" />
+								</div>
+					
+								<div class="foto-cuatro">
+					<img src="/imagenes/photo4.png" alt="" />
+								</div>
+					
+								<div class="foto-cinco">
+					<img src="/imagenes/photo5.png" alt="" />
+								</div>
+								<div class="foto-seis">
+					<img src="/imagenes/photo6.png" alt="" />
+								</div>
+				</div>
+		</figure>
+	</main>
+</Layout>
+
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	.foto-perfil img {
+		width: 156px;
+		height: 156px;
+		display: flex;
+		margin: 0 auto;
+		border-radius: 20px;
+	}
+	.nombre-ubicacion {
+		text-align: center;
+	}
+	.nombre-ubicacion h1 {
+		font-family: Montserrat;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 29px;
+		letter-spacing: 0em;
+	}
+	.nombre-ubicacion p {
+		color: #a9a9a9;
+	}
+	.skills {
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		gap: 40px;
+	}
+	.skills h3 {
+		text-align: center;
+		margin-top: 5px;
+	}
+	.tres-lineas {
+		width: 100px;
+		height: 60px;
+		background-color: #e5e5e5;
+		border-radius: 12px;
+		padding: 5px;
+	}
+	.tres-lineas p {
+		text-align: center;
+		margin-top: -25px;
+	}
+
+	.lista-dos {
+	display: grid;
+	width: 100%;
+	height: auto;
+	grid-template-areas: "ftres  ftres fcuatro" "fcinco fseis fcuatro";
+	grid-template-rows: 367px 350px;
+	grid-template-columns: 378px 403px 337px;
+	justify-content: center;
+	margin-top: 40px;
+	}
+	.foto-uno img, .foto-dos img, .foto-tres img, .foto-cinco img, .foto-seis img {
+		height: 350px;
+		border-radius: 20px;
+	}
+	.foto-cuatro img{
+		width: 340px;
+		border-radius: 20px;
+	}
+	.lista-uno{
+		display: flex;
+		gap: 35px;
+		justify-content: center;
+	}
+	.foto-tres{
+		grid-area: ftres;
+	}
+	.foto-cuatro{
+		grid-area: fcuatro;
+	}
+	.foto-cinco{
+		grid-area: fcinco;
+	}
+	.foto-seis{
+		grid-area: fseis;
+	}
+	@media (max-width:412px ) {
+ body{
+	display: flex;
+ }
+ .foto-perfil[data-astro-cid-j7pv25f6] img[data-astro-cid-j7pv25f6] {
+    width: 224px;
+    height: 217px;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 20px;
+    /* padding: 21px; */
+}
+.nombre-ubicacion[data-astro-cid-j7pv25f6] h1[data-astro-cid-j7pv25f6] {
+    font-family: Montserrat;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+.nombre-ubicacion {
+    font-size: 29px;
+}
+ .skills{
+	font-size: 20px;
+ }
+.tres-lineas{
+	width: 120px;
+	height: 80px;
+	margin: 10px;
+	padding: 26px;
+	font-size: 26px;
+}
+.foto-perfil {
+
+}
+
+</style>
